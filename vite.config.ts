@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: './', // 關鍵修復：使用相對路徑，解決 GitHub Pages 子路徑 (https://username.github.io/repo-name/) 資源 404 白畫面問題
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
